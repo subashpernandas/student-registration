@@ -4,6 +4,7 @@ import com.example.demo.entity.Urban;
 import com.example.demo.repository.UrbanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
 import com.example.demo.model.Student;
 
@@ -23,5 +24,10 @@ public class StudentController {
 	@PostMapping("/post")
 	public void storeUrbanDetails(@RequestBody Urban urban){
 		urbanRepository.save(urban);
+	}
+
+	@GetMapping("/findAll")
+	public List<Urban> fetchAll(){
+		return urbanRepository.findAll();
 	}
 }
