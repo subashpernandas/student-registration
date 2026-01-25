@@ -30,4 +30,9 @@ public class StudentController {
 	public List<Urban> fetchAll(){
 		return urbanRepository.findAll();
 	}
+
+	@GetMapping("/get")
+	public String get() {
+		return "subash";
+	}
 }
