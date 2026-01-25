@@ -33,6 +33,6 @@ public class StudentController {
 
 	@GetMapping("/get")
 	public String get() {
-		return "subash";
+		return "subash.pernandas.savari".toUpperCase();
 	}
 }
